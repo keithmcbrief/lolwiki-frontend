@@ -1,0 +1,22 @@
+.sidebar {
+  width: 320px;
+  height: 100%;
+  padding: 0 16px;
+  margin-right: 8px;
+}
+
+#root {
+  width: 100% !important;
+  height: 100%;
+}
+
+.App {
+  display: flex;
+}
+
+input[type='text'],
+textarea {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 12px;
+}
