@@ -6,6 +6,7 @@ import Champions from './pages/Champions';
 import Roles from './pages/Roles';
 import ChampionForm from './pages/ChampionForm';
 import ChampionPage from './pages/ChampionPage';
+import RoleForm from './pages/RoleForm';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/champions' element={<Champions />} />
           <Route path='/roles' element={<Roles />} />
+          <Route path='/role/create' element={<RoleForm />} />
           <Route path='/champion/create' element={<ChampionForm />} />
           <Route path='/champion/:id' element={<ChampionPage />} />
         </Routes>

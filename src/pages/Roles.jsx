@@ -6,6 +6,7 @@ const Roles = () => {
   async function getRoles() {
     const roles = await fetch('http://localhost:3000/roles');
     const res = await roles.json();
+    console.log(res)
     setRoles(res);
   }
 
