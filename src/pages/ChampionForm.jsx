@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
+import { API_URL } from '../../api';
 
 const ChampionForm = () => {
-  const url = 'http://localhost:3000/champion/create';
   const [roles, setRoles] = useState([]);
 
   async function getRoles() {
-    const roles = await fetch('http://localhost:3000/roles');
+    const roles = await fetch(`${API_URL}/roles`);
     const res = await roles.json();
-    console.log(res)
     setRoles(res);
   }
 
@@ -18,7 +17,7 @@ const ChampionForm = () => {
   return (
     <div>
       <h1>Create Champion</h1>
-      <form action={url} method='POST'>
+      <form action={`${API_URL}/champion/create`} method='POST'>
         <label htmlFor='name'>Name</label>
         <input type='text' name='name' required />
         <label htmlFor='name'>Title</label>

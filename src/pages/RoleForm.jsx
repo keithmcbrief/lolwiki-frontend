@@ -1,5 +1,7 @@
+import { API_URL } from '../../api';
+
 const RoleForm = () => {
-  const url = 'http://localhost:3000/role/create';
+  const url = `${API_URL}/role/create`;
 
   return (
     <div>

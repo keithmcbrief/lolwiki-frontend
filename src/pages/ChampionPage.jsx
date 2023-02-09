@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { API_URL } from '../../api';
 
 const ChampionPage = () => {
   const [data, setData] = useState();
@@ -22,16 +23,25 @@ const ChampionPage = () => {
       <span style={{ display: 'inline' }}>
         Roles:{' '}
         {data?.role.map((role, i) => {
-          return <span>{role?.name}{i+1 !== data?.role.length && ', '}</span>;
+          return (
+            <span>
+              {role?.name}
+              {i + 1 !== data?.role.length && ', '}
+            </span>
+          );
         })}
       </span>
       <p>{data?.summary}</p>
       <hr />
       <div>
-        <a href=''>Delete Champion</a>
+        <a href={`http://localhost:3000/champion/${id}/delete`}>
+          Delete Champion
+        </a>
       </div>
       <div>
-        <a href=''>Update Champion</a>
+        <Link to={`/champion/${id}/update`}>
+          Update Champion
+        </Link>
       </div>
     </div>
   );
