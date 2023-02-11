@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { API_URL } from '../../api';
 
 const Champions = () => {
@@ -20,9 +21,9 @@ const Champions = () => {
       <ul>
         {champions.map((champ) => (
           <li key={champ._id}>
-            <a href={`/champion/${champ._id}`}>
+            <Link to={`/champion/${champ._id}`}>
               {champ.name}, {champ.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

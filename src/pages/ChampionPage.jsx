@@ -33,7 +33,7 @@ const ChampionPage = () => {
       <p>{data?.summary}</p>
       <hr />
       <div>
-        <a href={`${API_URL}/champion/${id}/delete`}>Delete Champion</a>
+        <Link to={`${API_URL}/champion/${id}/delete`}>Delete Champion</Link>
       </div>
       <div>
         <Link to={`/champion/${id}/update`}>Update Champion</Link>
