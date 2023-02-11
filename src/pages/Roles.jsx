@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { API_URL } from '../../api';
 
 const Roles = () => {
@@ -20,7 +21,7 @@ const Roles = () => {
       <ul>
         {roles.map((role) => (
           <li key={role._id}>
-            <a href={`/role/${role._id}`}>{role.name}</a>
+            <Link to={`/role/${role._id}`}>{role.name}</Link>
           </li>
         ))}
       </ul>
