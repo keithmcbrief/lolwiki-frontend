@@ -20,7 +20,7 @@ const Roles = () => {
       <ul>
         {roles.map((role) => (
           <li key={role._id}>
-            <a href={`/roles/${role._id}`}>{role.name}</a>
+            <a href={`/role/${role._id}`}>{role.name}</a>
           </li>
         ))}
       </ul>

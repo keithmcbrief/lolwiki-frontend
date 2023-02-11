@@ -10,7 +10,6 @@ const ChampionPage = () => {
     fetch(`http://localhost:3000/champion/${id}`)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         setData(res);
       });
   }, []);
@@ -34,14 +33,10 @@ const ChampionPage = () => {
       <p>{data?.summary}</p>
       <hr />
       <div>
-        <a href={`http://localhost:3000/champion/${id}/delete`}>
-          Delete Champion
-        </a>
+        <a href={`${API_URL}/champion/${id}/delete`}>Delete Champion</a>
       </div>
       <div>
-        <Link to={`/champion/${id}/update`}>
-          Update Champion
-        </Link>
+        <Link to={`/champion/${id}/update`}>Update Champion</Link>
       </div>
     </div>
   );

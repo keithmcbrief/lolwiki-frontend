@@ -8,8 +8,7 @@ import ChampionForm from './pages/ChampionForm';
 import ChampionPage from './pages/ChampionPage';
 import RoleForm from './pages/RoleForm';
 import UpdateChampionForm from './pages/UpdateChampionForm';
-
-const baseurl = '12312321'
+import RolePage from './pages/RolePage';
 
 function App() {
   return (
@@ -21,6 +20,7 @@ function App() {
           <Route path='/champions' element={<Champions />} />
           <Route path='/roles' element={<Roles />} />
           <Route path='/role/create' element={<RoleForm />} />
+          <Route path='/role/:id' element={<RolePage />} />
           <Route path='/champion/create' element={<ChampionForm />} />
           <Route path='/champion/:id' element={<ChampionPage />} />
           <Route path='/champion/:id/update' element={<UpdateChampionForm />} />

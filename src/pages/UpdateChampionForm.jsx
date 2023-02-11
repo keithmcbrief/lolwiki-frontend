@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { API_URL } from '../../api';
 
 const UpdateChampionForm = () => {
-  const url = `${API_URL}/champion/create`;
   const { id } = useParams();
+  const url = `${API_URL}/champion/${id}/update`;
   const [roles, setRoles] = useState([]);
   const [data, setData] = useState({});
   const [checkboxes, setCheckboxes] = useState();
@@ -70,7 +70,7 @@ const UpdateChampionForm = () => {
           Role
         </label>
         {checkboxes}
-        <button style={{ marginTop: '12px' }}>Create</button>
+        <button style={{ marginTop: '12px' }}>Update</button>
       </form>
     </div>
   );
