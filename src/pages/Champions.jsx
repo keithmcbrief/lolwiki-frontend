@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
+import { API_URL } from '../../api';
 
 const Champions = () => {
   const [champions, setChampions] = useState([]);
 
   async function getChampions() {
-    const champions = await fetch('http://localhost:3000/champions');
+    const champions = await fetch(`${API_URL}/champions`);
     const res = await champions.json();
     setChampions(res);
   }
